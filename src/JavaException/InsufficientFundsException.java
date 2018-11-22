@@ -15,7 +15,8 @@ public class InsufficientFundsException extends Exception {
 
     @Override
     public String getMessage() {
-        System.out.println("\nAmount exceeds Account balance\nCurrent balance: " + getBalance());
+        System.out.println("Amount exceeds Account balance");
+        System.out.println("Current balance: " + getBalance());
         return super.getMessage();
     }
 
