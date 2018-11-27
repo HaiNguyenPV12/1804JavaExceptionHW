@@ -140,7 +140,6 @@ public class Bank {
                             checkc = true;
                         }
                     } catch (InsufficientFundsException e) {
-                        e.getMessage();
                     } catch (NumberFormatException e) {
                         System.out.println("\nError! Must be a number!\n");
                     }

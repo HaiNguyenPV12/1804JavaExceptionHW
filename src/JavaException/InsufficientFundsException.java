@@ -7,30 +7,12 @@ public class InsufficientFundsException extends Exception {
 
     private static final long serialVersionUID = 649717142336031471L;
 
-    private double balance;
-
-    public InsufficientFundsException(double balance) {
-        this.setBalance(balance);
+    public InsufficientFundsException(String msg) {
+        super(msg);
     }
 
-    @Override
-    public String getMessage() {
-        System.out.println("Amount exceeds Account balance");
-        System.out.println("Current balance: " + getBalance());
-        return super.getMessage();
+    public InsufficientFundsException(double currentbal) {
+        System.out.println("Insufficient funds. Current balance: " + currentbal);
     }
 
-    /**
-     * @param balance the balance to set
-     */
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-    /**
-     * @return the balance
-     */
-    public double getBalance() {
-        return balance;
-    }
 }
